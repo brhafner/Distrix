@@ -44,3 +44,17 @@
 // chart.legend = new am4charts.Legend();
 
 // export default chart;
+
+
+
+"properties":
+        { "name": "Congressional District 14", 
+        "id": "0614", 
+        "STATEID": "06", 
+        "CD116": "14", 
+        "CDSESSION": "116",
+        "STATENAME": "California" }, 
+        "id": "0614" },
+    {
+    "type": "Feature", "geometry": {
+        "type": "Polygon", "coordinates": [[[-122.117, 37.507], [-122.113, 37.51], [-122.108, 37.514], [-122.102, 37.523], [-122.094, 37.53], [-122.09, 37.532], [-122.086, 37.533], [-122.078, 37.534],
