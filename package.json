@@ -17,6 +17,8 @@
     "start:debug": "DEBUG=* node app.js"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.9.22",
+    "@amcharts/amcharts4-geodata": "^4.1.15",
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
