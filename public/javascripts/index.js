@@ -38,11 +38,12 @@ window.onload = function () {
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}, {id}";
+    polygonTemplate.togglable = true;
     // polygonTemplate.tooltipText = modata;
-    polygonTemplate.fill = am4core.color("#74B266");
+    polygonTemplate.fill = am4core.color("#156064");
     // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = am4core.color("#367B25");
+    hs.properties.fill = am4core.color("#F8E16C");
 
     // polygonTemplate.tooltip.interactionsEnabled = true;
     
@@ -54,7 +55,7 @@ window.onload = function () {
             currentActive.isActive = false;
         }
         // this.console.log(windowevent.target)
-        window.event1 = event.target
+        // window.event1 = event.target
         this.console.log(event.target._dataItem._dataContext)
         // chart.zoomToMapObject(event.target);
         // currentActive = event.target;
