@@ -3,6 +3,12 @@ body {
 }
 
 #chartdiv {
-  width: 100%;
+  width: 40%;
   height: 600px;
+  position: relative;
+  float: right;
+  /* margin-top: 20px; */
+  margin: 20px 0 10px 0px !important;
+  /* margin: 60px 0 20px 650px !important; */
+  /* align-items: left !important; */
 }

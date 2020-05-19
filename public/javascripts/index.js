@@ -1,20 +1,3 @@
-// const axios = require('axios');
-// const chart = require('./main_map');
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     // chart.write("chartdiv");
-
-// })
-
-// { MapPolygonSeriesDataItem, MapPolygonSeries }
-
-var chartData = [{
-    name: "Congressional District 1",
-    val: 0601
-}, {
-    name: "Congressional District 2",
-    val: 11
-}];
 
 
 window.onload = function () {
@@ -37,7 +20,7 @@ window.onload = function () {
     // var modata = polygonSeries.MapPolygonSeriesDataItem = chartData[0].val
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{name}, {id}";
+    polygonTemplate.tooltipText = "{name}";
     polygonTemplate.togglable = true;
     // polygonTemplate.tooltipText = modata;
     polygonTemplate.fill = am4core.color("#156064");
@@ -54,9 +37,21 @@ window.onload = function () {
         if (currentActive) {
             currentActive.isActive = false;
         }
+        
+        this.console.log(event.target._dataItem._dataContext.id)
+
+        // someOtherFunction(id){
+            // lookup obj in db i build
+            // return div with found data, and set as child to this div
+
+            // will need to remove child (in case user already clicked on a district), then add new child
+
+            // this would change the class name of the details div
+            // and tell it to lookup data based on id passed in 
+        // }
+
         // this.console.log(windowevent.target)
         // window.event1 = event.target
-        this.console.log(event.target._dataItem._dataContext)
         // chart.zoomToMapObject(event.target);
         // currentActive = event.target;
     })

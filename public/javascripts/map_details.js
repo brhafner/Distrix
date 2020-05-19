@@ -1,3 +1,44 @@
+// "properties":
+//         { "name": "Congressional District 14", 
+//         "id": "0614", 
+//         "STATEID": "06", 
+//         "CD116": "14", 
+//         "CDSESSION": "116",
+//         "STATENAME": "California" }, 
+//         "id": "0614" },
+//     {
+//     "type": "Feature", "geometry": {
+//         "type": "Polygon", "coordinates": [[[-122.117, 37.507], [-122.113, 37.51], [-122.108, 37.514], [-122.102, 37.523], [-122.094, 37.53], [-122.09, 37.532], [-122.086, 37.533], [-122.078, 37.534],
+
+var chartData = {
+    0601: {
+        name: "Congressional District 1",
+        "Current Representative": "Doug LaMalfa",
+        "Phone Number": "555-555-5555",
+        "Median income": "$55316",
+        ethnicity: [
+                "79.08% white",
+                "1.68% black",
+                "2.89% Asian",
+                "11.99% Hispanic",
+                "3.51% Native American",
+                "0.26% Pacific Islands Americans"
+        ]
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import * as am4core from "@amcharts/amcharts4/core";
 // import * as am4charts from "@amcharts/amcharts4/charts";
 // // import * as am4maps from "@amcharts/amcharts4/maps"
@@ -44,17 +85,3 @@
 // chart.legend = new am4charts.Legend();
 
 // export default chart;
-
-
-
-"properties":
-        { "name": "Congressional District 14", 
-        "id": "0614", 
-        "STATEID": "06", 
-        "CD116": "14", 
-        "CDSESSION": "116",
-        "STATENAME": "California" }, 
-        "id": "0614" },
-    {
-    "type": "Feature", "geometry": {
-        "type": "Polygon", "coordinates": [[[-122.117, 37.507], [-122.113, 37.51], [-122.108, 37.514], [-122.102, 37.523], [-122.094, 37.53], [-122.09, 37.532], [-122.086, 37.533], [-122.078, 37.534],
