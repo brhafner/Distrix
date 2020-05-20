@@ -1,6 +1,10 @@
 const details = require('./map_details') 
+const AxiosUtil = require('../../requests/axios_util');
 
 window.onload = function () {
+    let apiRes;
+    AxiosUtil.fetchAllCongressMembers().then(res => apiRes = res.data.results);
+    // debugger
     var chart = am4core.create("chartdiv", am4maps.MapChart);
 
     // Set map definition
@@ -37,8 +41,9 @@ window.onload = function () {
         }
         
         // this.console.log(event.target._dataItem._dataContext)
-        this.console.log(event.target._dataItem._dataContext.id)
-        let elementId = event.target._dataItem._dataContext.id
+        // this.console.log(event.target._dataItem._dataContext.CD116)
+        // console.log(parseInt(event.target._dataItem._dataContext.CD116))
+        let elementId = event.target._dataItem._dataContext.CD116
         // console.log(typeof elementId)
         
         // let formatedDataDiv = formatData(elementId)
@@ -47,8 +52,8 @@ window.onload = function () {
         // check if child node
         var hasChild = document.getElementById("main-details-container").hasChildNodes();
         console.log(hasChild)
-        
-        document.getElementById("main-details-container").innerHTML = formatData(elementId);
+        // debugger
+        document.getElementById("main-details-container").innerHTML = formatData(elementId, apiRes);
         // if(hasChild){
         //     // replace child node
         //     // var textnode = document.createTextNode("banana");
@@ -72,21 +77,45 @@ window.onload = function () {
 }
 
 
-const formatData = (lookupId) => {
-    // lookup obj in db i build
-    let data = details.distrixDetails[lookupId]
-        console.log("District Details:", data)
-    
+const formatData = (lookupId, apiRes) => {
+//   debugger
+    let ref = parseInt(lookupId)
+    console.log(ref);
+    console.log(parseInt(apiRes[0].district))
+    console.log(apiRes)
+    // debugger
+    // console.log(apiRes.PromiseValue)
+    // let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
+    let thisDistrict;
+
+    apiRes.forEach((obj) => {
+        if (parseInt(obj.district) === ref){
+            thisDistrict = obj
+        }
+    })
+
      const returnDiv = `<div class="details-container">
-            <h1>${data.name}</h1>
+            <h1>${thisDistrict.name}</h1>
             <div class="rep-container">
-                <p>Congress Member's Name: ${data.rep}</p>
-                <p>Party Affiliation: ${data.party}</p>
-                <p>Phone Number: ${data.phone}</p>
-                <a href="${data.link}">Visit Thier Website</a>
+                <p>Congress Member's Name: ${thisDistrict.rep}</p>
+                <p>Party Affiliation: ${thisDistrict.party}</p>
+                <p>Phone Number: ${thisDistrict.phone}</p>
+                <a href="${thisDistrict.link}">Visit Website</a>
             </div>
         </div>`
-    return returnDiv;
+
+
+        return returnDiv;
+
+
+
+      // lookup obj in db i build
+    // let ref = details.distrixDetails[lookupId]
+        // console.log("District Details:", data)
+    // let thisDistrict;
+    // let apiRes = AxiosUtil.fetchAllCongressMembers().then(
+
+
     // return div with found data, and set as child to this div
     // console.log(data)
     // will need to remove child(in case user already clicked on a district), then add new child
