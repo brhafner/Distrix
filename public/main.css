@@ -2,7 +2,7 @@
     position: absolute;
     top: 10px;
     left: 50px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .welcome-div > p:first-child{
@@ -12,4 +12,17 @@
 .welcome-div >p:nth-child(2){
     font-size: 20px;
     color: #156064;
+}
+
+#main-details-container{
+    width: 400px;
+    z-index: -1;
+}
+.details-container{
+    /* margin-top: 50px; */
+    color: #156064;
+    width: 400px;
+    z-index: -1;
+    /* background: #F8E16C; */
+    padding-left: 30px;
 }

@@ -48,18 +48,21 @@ window.onload = function () {
         var hasChild = document.getElementById("main-details-container").hasChildNodes();
         console.log(hasChild)
         
-        if(hasChild){
-            // replace child node
-            var textnode = document.createTextNode("banana");
-            var list = document.getElementById("main-details-container");   // Get the <ul> element with id="myList"
-            list.removeChild(list.childNodes[0]); 
-            list.appendChild(textnode);
-        } else {
-            // add childnode 
-            let node = document.getElementById("main-details-container")
-            var textnode = document.createTextNode("Water");
-            node.appendChild(textnode); 
-        }
+        document.getElementById("main-details-container").innerHTML = formatData(elementId);
+        // if(hasChild){
+        //     // replace child node
+        //     // var textnode = document.createTextNode("banana");
+        //     var list = document.getElementById("main-details-container");   // Get the <ul> element with id="myList"
+        //     list.removeChild(list.childNodes[0]); 
+        //     // list.appendChild(textnode);
+        //     list.appendChild(formatData(elementId))
+        // } else {
+        //     // add childnode 
+        //     let node = document.getElementById("main-details-container")
+        //     // var textnode = document.createTextNode("Water");
+        //     // node.appendChild(textnode); 
+        //     node.appendChild(formatData(elementId))
+        // }
 
         // this.console.log(windowevent.target)
         // window.event1 = event.target
@@ -77,18 +80,10 @@ const formatData = (lookupId) => {
      const returnDiv = `<div class="details-container">
             <h1>${data.name}</h1>
             <div class="rep-container">
-                <p>${data.rep}</p>
-                <p>${data.party}</p>
-                <p>${data.phone}</p>
-                <p>${data.twitter}</p>
-            </div>
-            <div class="distric-demography">
-                <p>{data.medIncome}</p>
-                <ul>
-                    {data.ethnicity.map(el => {
-                        return <li>{el}</li>
-                    })}
-                </ul>
+                <p>Congress Member's Name: ${data.rep}</p>
+                <p>Party Affiliation: ${data.party}</p>
+                <p>Phone Number: ${data.phone}</p>
+                <a href="${data.link}">Visit Thier Website</a>
             </div>
         </div>`
     return returnDiv;
