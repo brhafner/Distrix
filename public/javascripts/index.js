@@ -1,4 +1,4 @@
-
+const details = require('./map_details') 
 
 window.onload = function () {
     var chart = am4core.create("chartdiv", am4maps.MapChart);
@@ -11,8 +11,6 @@ window.onload = function () {
 
     // Create map polygon series
     var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-    
-    
     
     // Make map load polygon (like country names) data from GeoJSON
     polygonSeries.useGeodata = true;
@@ -38,17 +36,30 @@ window.onload = function () {
             currentActive.isActive = false;
         }
         
+        // this.console.log(event.target._dataItem._dataContext)
         this.console.log(event.target._dataItem._dataContext.id)
+        let elementId = event.target._dataItem._dataContext.id
+        // console.log(typeof elementId)
+        
+        // let formatedDataDiv = formatData(elementId)
+        // parentDiv.appendChild(formatData(elementId))
 
-        // someOtherFunction(id){
-            // lookup obj in db i build
-            // return div with found data, and set as child to this div
-
-            // will need to remove child (in case user already clicked on a district), then add new child
-
-            // this would change the class name of the details div
-            // and tell it to lookup data based on id passed in 
-        // }
+        // check if child node
+        var hasChild = document.getElementById("main-details-container").hasChildNodes();
+        console.log(hasChild)
+        
+        if(hasChild){
+            // replace child node
+            var textnode = document.createTextNode("banana");
+            var list = document.getElementById("main-details-container");   // Get the <ul> element with id="myList"
+            list.removeChild(list.childNodes[0]); 
+            list.appendChild(textnode);
+        } else {
+            // add childnode 
+            let node = document.getElementById("main-details-container")
+            var textnode = document.createTextNode("Water");
+            node.appendChild(textnode); 
+        }
 
         // this.console.log(windowevent.target)
         // window.event1 = event.target
@@ -56,6 +67,50 @@ window.onload = function () {
         // currentActive = event.target;
     })
 }
+
+
+const formatData = (lookupId) => {
+    // lookup obj in db i build
+    let data = details.distrixDetails[lookupId]
+        console.log("District Details:", data)
+    
+     const returnDiv = `<div class="details-container">
+            <h1>${data.name}</h1>
+            <div class="rep-container">
+                <p>${data.rep}</p>
+                <p>${data.party}</p>
+                <p>${data.phone}</p>
+                <p>${data.twitter}</p>
+            </div>
+            <div class="distric-demography">
+                <p>{data.medIncome}</p>
+                <ul>
+                    {data.ethnicity.map(el => {
+                        return <li>{el}</li>
+                    })}
+                </ul>
+            </div>
+        </div>`
+    return returnDiv;
+    // return div with found data, and set as child to this div
+    // console.log(data)
+    // will need to remove child(in case user already clicked on a district), then add new child
+
+    // this would change the class name of the details div
+    // and tell it to lookup data based on id passed in 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // var series3 = chart.series.push(new am4charts.CircleBullet());

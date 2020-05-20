@@ -6,6 +6,23 @@ const PORT = process.env.PORT || 8000; // process.env accesses heroku's environm
 
 app.use(express.static('public'))
 
+app.get('/repDetails', (request, response) => {
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  fetch(`http://whoismyrepresentative.com/getall_reps_byname.php?name=${request.rep}`)
+    .then((response) => {
+      return response.text();
+    }).then((body) => {
+      let results = JSON.parse(body)
+      console.log(results)   
+      response.send(results)
+    });
+});
+
+
+
+
+
+
 app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
 })

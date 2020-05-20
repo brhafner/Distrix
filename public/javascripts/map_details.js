@@ -10,12 +10,17 @@
 //     "type": "Feature", "geometry": {
 //         "type": "Polygon", "coordinates": [[[-122.117, 37.507], [-122.113, 37.51], [-122.108, 37.514], [-122.102, 37.523], [-122.094, 37.53], [-122.09, 37.532], [-122.086, 37.533], [-122.078, 37.534],
 
-var chartData = {
-    0601: {
+export const distrixDetails = {
+    "0601": {
         name: "Congressional District 1",
-        "Current Representative": "Doug LaMalfa",
-        "Phone Number": "555-555-5555",
-        "Median income": "$55316",
+        rep: "LaMalfa",
+        party: "Republican",
+        phone: "(202)225-3076",
+        twitter: "@RepLaMalfa",
+        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
+        pvi: "R+11",
+        medIncome: "$55316",
         ethnicity: [
                 "79.08% white",
                 "1.68% black",
@@ -23,6 +28,63 @@ var chartData = {
                 "11.99% Hispanic",
                 "3.51% Native American",
                 "0.26% Pacific Islands Americans"
+        ]
+    },
+    "0602": {
+        name: "Congressional District 1",
+        rep: "LaMalfa",
+        party: "Republican",
+        phone: "(202)225-3076",
+        twitter: "@RepLaMalfa",
+        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
+        pvi: "R+11",
+        medIncome: "$55316",
+        ethnicity: [
+            "79.08% white",
+            "1.68% black",
+            "2.89% Asian",
+            "11.99% Hispanic",
+            "3.51% Native American",
+            "0.26% Pacific Islands Americans"
+        ]
+    },
+    "0603": {
+        name: "Congressional District 1",
+        rep: "LaMalfa",
+        party: "Republican",
+        phone: "(202)225-3076",
+        twitter: "@RepLaMalfa",
+        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
+        pvi: "R+11",
+        medIncome: "$55316",
+        ethnicity: [
+            "79.08% white",
+            "1.68% black",
+            "2.89% Asian",
+            "11.99% Hispanic",
+            "3.51% Native American",
+            "0.26% Pacific Islands Americans"
+        ]
+    },
+    "0604": {
+        name: "Congressional District 1",
+        rep: "LaMalfa",
+        party: "Republican",
+        phone: "(202)225-3076",
+        twitter: "@RepLaMalfa",
+        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
+        pvi: "R+11",
+        medIncome: "$55316",
+        ethnicity: [
+            "79.08% white",
+            "1.68% black",
+            "2.89% Asian",
+            "11.99% Hispanic",
+            "3.51% Native American",
+            "0.26% Pacific Islands Americans"
         ]
     }
 };
