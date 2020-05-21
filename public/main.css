@@ -18,10 +18,6 @@ Html, body {
     font-weight: 700;
     color: #156064;
 }
-/* .welcome-div >p:nth-child(2){
-    font-size: 20px;
-    color: #156064;
-} */
 
 #main-details-container{
     width: 400px;
@@ -49,7 +45,6 @@ Html, body {
 .rep-container-onload{
     display: flex;
     justify-content: space-between;
-    /* flex-direction: column-reverse; */
 }
 
 .rep-container-onload > p{

@@ -1,4 +1,4 @@
-const { funding } = require('./map_details') 
+const distDetails = require('./map_details') 
 const AxiosUtil = require('../../requests/axios_util');
 
 window.onload = function () {
@@ -86,6 +86,7 @@ const formatData = (lookupId, apiRes) => {
 // console.log(apiRes.PromiseValue)
 // let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
     let ref = parseInt(lookupId)
+    let funding = distDetails.funding[`${ref}`]
     let thisDistrict;
 
     apiRes.forEach((obj) => {
@@ -101,7 +102,7 @@ const formatData = (lookupId, apiRes) => {
                 <p>Party Affiliation: ${thisDistrict.party}</p>
                 <p>Phone Number: ${thisDistrict.phone}</p>
                 <a href="${thisDistrict.link}">Visit Website</a>
-                <a href="${funding.ref}">Campaign Funding</a>
+                <a href="${funding}">Campaign Funding</a>
                 
             </div>
         </div>`
