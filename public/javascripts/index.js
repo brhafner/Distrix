@@ -1,4 +1,4 @@
-const details = require('./map_details') 
+const { funding } = require('./map_details') 
 const AxiosUtil = require('../../requests/axios_util');
 
 window.onload = function () {
@@ -79,13 +79,13 @@ window.onload = function () {
 
 const formatData = (lookupId, apiRes) => {
 //   debugger
+// console.log(ref);
+// console.log(parseInt(apiRes[0].district))
+// console.log(apiRes)
+// debugger
+// console.log(apiRes.PromiseValue)
+// let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
     let ref = parseInt(lookupId)
-    console.log(ref);
-    console.log(parseInt(apiRes[0].district))
-    console.log(apiRes)
-    // debugger
-    // console.log(apiRes.PromiseValue)
-    // let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
     let thisDistrict;
 
     apiRes.forEach((obj) => {
@@ -95,12 +95,14 @@ const formatData = (lookupId, apiRes) => {
     })
 
      const returnDiv = `<div class="details-container">
-            <h1>${thisDistrict.name}</h1>
+            <h1>CA Congressional District ${thisDistrict.district}</h1>
             <div class="rep-container">
-                <p>Congress Member's Name: ${thisDistrict.rep}</p>
+                <p>Congress Member's Name: ${thisDistrict.name}</p>
                 <p>Party Affiliation: ${thisDistrict.party}</p>
                 <p>Phone Number: ${thisDistrict.phone}</p>
                 <a href="${thisDistrict.link}">Visit Website</a>
+                <a href="${funding.ref}">Campaign Funding</a>
+                
             </div>
         </div>`
 

@@ -1,14 +1,59 @@
-// "properties":
-//         { "name": "Congressional District 14", 
-//         "id": "0614", 
-//         "STATEID": "06", 
-//         "CD116": "14", 
-//         "CDSESSION": "116",
-//         "STATENAME": "California" }, 
-//         "id": "0614" },
-//     {
-//     "type": "Feature", "geometry": {
-//         "type": "Polygon", "coordinates": [[[-122.117, 37.507], [-122.113, 37.51], [-122.108, 37.514], [-122.102, 37.523], [-122.094, 37.53], [-122.09, 37.532], [-122.086, 37.533], [-122.078, 37.534],
+
+export const funding = {
+    1: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+    2: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+    3: "https://www.opensecrets.org/members-of-congress/summary?cid=N00030856",
+    4: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006863",
+    5: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007419",
+    6: "https://www.opensecrets.org/members-of-congress/summary?cid=N00027459",
+    7: "https://www.opensecrets.org/members-of-congress/summary?cid=N00030717",
+    8: "https://www.opensecrets.org/races/summary?cycle=2020&id=CA08",
+    9: "https://www.opensecrets.org/members-of-congress/summary?cid=N00026926",
+    10: "https://www.opensecrets.org/members-of-congress/summary?cid=N00040853",
+    11: "https://www.opensecrets.org/members-of-congress/summary?cid=N00030709",
+    12: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007360",
+    13: "https://www.opensecrets.org/members-of-congress/summary?cid=N00008046",
+    14: "https://www.opensecrets.org/members-of-congress/summary?cid=N00029649",
+    15: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033508",
+    16: "https://www.opensecrets.org/members-of-congress/summary?cid=N00026341",
+    17: "https://www.opensecrets.org/members-of-congress/summary?cid=N00026427",
+    18: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007335",
+    19: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007479",
+    20: "https://www.opensecrets.org/members-of-congress/summary?cid=N00038601",
+    21: "https://www.opensecrets.org/members-of-congress/summary?cid=N00028122",
+    22: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007248",
+    23: "https://www.opensecrets.org/members-of-congress/summary?cid=N00028152",
+    24: "https://www.opensecrets.org/members-of-congress/summary?cid=N00037015",
+    25: "#", //no data available
+    26: "https://www.opensecrets.org/members-of-congress/summary?cid=N00034254",
+    27: "https://www.opensecrets.org/members-of-congress/summary?cid=N00030600",
+    28: "https://www.opensecrets.org/members-of-congress/summary?cid=N00009585",
+    29: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033373",
+    30: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006897",
+    31: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033997",
+    32: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006789",
+    33: "https://www.opensecrets.org/members-of-congress/summary?cid=N00035825",
+    34: "https://www.opensecrets.org/members-of-congress/summary?cid=N00040597",
+    35: "https://www.opensecrets.org/members-of-congress/summary?cid=N00036107",
+    36: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033510",
+    37: "https://www.opensecrets.org/members-of-congress/summary?cid=N00031877",
+    38: "https://www.opensecrets.org/members-of-congress/summary?cid=N00024870",
+    39: "https://www.opensecrets.org/members-of-congress/summary?cid=N00041464",
+    40: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006671",
+    41: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006701",
+    42: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007099",
+    43: "https://www.opensecrets.org/members-of-congress/summary?cid=N00006690",
+    44: "https://www.opensecrets.org/members-of-congress/summary?cid=N00037019",
+    45: "https://www.opensecrets.org/members-of-congress/summary?cid=N00040865",
+    46: "https://www.opensecrets.org/members-of-congress/summary?cid=N00037260",
+    47: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033274",
+    48: "https://www.opensecrets.org/members-of-congress/summary?cid=N00040666",
+    49: "https://www.opensecrets.org/members-of-congress/summary?cid=N00040667",
+    50: "https://www.opensecrets.org/races/summary?cycle=2020&id=CA50",
+    51: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007021",
+    52: "https://www.opensecrets.org/members-of-congress/summary?cid=N00033591",
+    53: "https://www.opensecrets.org/races/summary?cycle=2020&id=CA53"
+}
 
 export const distrixDetails = {
     "0601": {
@@ -17,7 +62,7 @@ export const distrixDetails = {
         party: "Republican",
         phone: "202-225-3076",
         link: "https://lamalfa.house.gov",
-        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
+       
         // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
         pvi: "R+11",
         medIncome: "$55316",
@@ -89,61 +134,3 @@ export const distrixDetails = {
     }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-// import * as am4core from "@amcharts/amcharts4/core";
-// import * as am4charts from "@amcharts/amcharts4/charts";
-// // import * as am4maps from "@amcharts/amcharts4/maps"
-
-// // Create chart instance
-// let chart = am4core.create("chartdiv", am4charts.PieChart);
-
-// // Create pie series
-// let series = chart.series.push(new am4charts.PieSeries());
-// series.dataFields.value = "litres";
-// series.dataFields.category = "country";
-
-// // Add data
-// chart.data = [{
-//     "country": "Lithuania",
-//     "litres": 501.9
-// }, {
-//     "country": "Czech Republic",
-//     "litres": 301.9
-// }, {
-//     "country": "Ireland",
-//     "litres": 201.1
-// }, {
-//     "country": "Germany",
-//     "litres": 165.8
-// }, {
-//     "country": "Australia",
-//     "litres": 139.9
-// }, {
-//     "country": "Austria",
-//     "litres": 128.3
-// }, {
-//     "country": "UK",
-//     "litres": 99
-// }, {
-//     "country": "Belgium",
-//     "litres": 60
-// }, {
-//     "country": "The Netherlands",
-//     "litres": 50
-// }];
-
-// // And, for a good measure, let's add a legend
-// chart.legend = new am4charts.Legend();
-
-// export default chart;

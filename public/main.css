@@ -1,31 +1,60 @@
-/* .main-container{
-    background-color: cornflowerblue;
-} */
+Html, body {
+  background-image: url('./photos/sunset.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} 
+
 .welcome-div{
     position: absolute;
-    top: 10px;
+    top: 40px;
     left: 50px;
     z-index: -1;
+    max-width: 600px;
 }
 
 .welcome-div > p:first-child{
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
     color: #156064;
 }
-.welcome-div >p:nth-child(2){
+/* .welcome-div >p:nth-child(2){
     font-size: 20px;
     color: #156064;
-}
+} */
 
 #main-details-container{
     width: 400px;
     z-index: -1;
+    margin-top: 75px;
 }
 .details-container{
-    /* margin-top: 50px; */
     color: #156064;
-    width: 400px;
+    width: 650px;
     z-index: -1;
-    /* background: #F8E16C; */
     padding-left: 30px;
+}
+
+.details-container h1{
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+.details-container h2{
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.rep-container-onload{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column-reverse; */
+}
+
+.rep-container-onload > p{
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-right: 45px
 }
