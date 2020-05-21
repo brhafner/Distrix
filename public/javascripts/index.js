@@ -98,12 +98,13 @@ const formatData = (lookupId, apiRes) => {
      const returnDiv = `<div class="details-container">
             <h1>CA Congressional District ${thisDistrict.district}</h1>
             <div class="rep-container">
-                <p>Congress Member's Name: ${thisDistrict.name}</p>
-                <p>Party Affiliation: ${thisDistrict.party}</p>
-                <p>Phone Number: ${thisDistrict.phone}</p>
-                <a href="${thisDistrict.link}">Visit Website</a>
-                <a href="${funding}">Campaign Funding</a>
-                
+                <p>Name: ${thisDistrict.name}</p>
+                <p>Party: ${thisDistrict.party}</p>
+                <p>Phone: ${thisDistrict.phone}</p>
+                <div class="external-links">
+                    <a href="${thisDistrict.link}">Visit Website</a>
+                    <a href="${funding}">Campaign Funding</a>
+                </div>
             </div>
         </div>`
 

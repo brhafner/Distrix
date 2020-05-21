@@ -53,3 +53,24 @@ Html, body {
     padding-left: 10px;
     margin-right: 45px
 }
+
+.rep-container p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.external-links{
+    margin-top: 30px;
+}
+.external-links > a{
+    font-size: 20px;
+    margin: 30px 10px 0 0px;
+    padding: 10px;
+    background-color: #F8E16C;
+    border-radius: 4px;
+}
+
+.external-links > a:hover{
+    color: #F8E16C;
+    background-color:#156064;;
+}
