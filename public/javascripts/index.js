@@ -85,8 +85,10 @@ const formatData = (lookupId, apiRes) => {
 // debugger
 // console.log(apiRes.PromiseValue)
 // let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
-    let ref = parseInt(lookupId)
-    let funding = distDetails.funding[`${ref}`]
+    let ref = parseInt(lookupId);
+    let funding = distDetails.funding[`${ref}`];
+    let voting = distDetails.voting[`${ref}`];
+
     let thisDistrict;
 
     apiRes.forEach((obj) => {
@@ -102,8 +104,9 @@ const formatData = (lookupId, apiRes) => {
                 <p>Party: ${thisDistrict.party}</p>
                 <p>Phone: ${thisDistrict.phone}</p>
                 <div class="external-links">
-                    <a href="${thisDistrict.link}">Visit Website</a>
-                    <a href="${funding}">Campaign Funding</a>
+                    <a href="${thisDistrict.link}" target="_blank">Visit Website</a>
+                    <a href="${funding}" target="_blank">Campaign Funding</a>
+                    <a href="${voting}" target="_blank">Voting Record</a>
                 </div>
             </div>
         </div>`
