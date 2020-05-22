@@ -1,10 +1,3 @@
-header{
-    /* position: absolute; */
-    /* background: #156064; */
-    /* height: 40px; */
-
-}
-
 .contact-info{
     position: absolute;
     display: flex;
@@ -97,7 +90,3 @@ Html, body {
     color: #F8E16C;
     background-color:#156064;;
 }
-
-/* #chartdiv{
-    margin-top: ;
-} */
