@@ -29,9 +29,6 @@ window.onload = function () {
     // Create hover state and set alternative fill color
     let hs = polygonTemplate.states.create("hover");
     hs.properties.fill = am4core.color("#F8E16C");
-
-    // polygonTemplate.tooltip.interactionsEnabled = true;
-    
     
     let currentActive;
     polygonTemplate.events.on("hit", (event) => {
@@ -40,12 +37,9 @@ window.onload = function () {
             currentActive.isActive = false;
         }
         let elementId = event.target._dataItem._dataContext.CD116
-
-        // check if child node
-        var hasChild = document.getElementById("main-details-container").hasChildNodes();
-        console.log(hasChild)
-        // debugger
         document.getElementById("main-details-container").innerHTML = formatData(elementId, apiRes);
+        
+        // var hasChild = document.getElementById("main-details-container").hasChildNodes();
         // if(hasChild){
         //     // replace child node
         //     // var textnode = document.createTextNode("banana");
@@ -60,23 +54,11 @@ window.onload = function () {
         //     // node.appendChild(textnode); 
         //     node.appendChild(formatData(elementId))
         // }
-
-        // this.console.log(windowevent.target)
-        // window.event1 = event.target
-        // chart.zoomToMapObject(event.target);
-        // currentActive = event.target;
-    })
-}
+    });
+};
 
 
 const formatData = (lookupId, apiRes) => {
-//   debugger
-// console.log(ref);
-// console.log(parseInt(apiRes[0].district))
-// console.log(apiRes)
-// debugger
-// console.log(apiRes.PromiseValue)
-// let thisDistrict = apiRes.filter((districtObj) => (parseInt(districtObj.district) === ref))
     let ref = parseInt(lookupId);
     let funding = distDetails.funding[`${ref}`];
     let voting = distDetails.voting[`${ref}`];
@@ -102,157 +84,5 @@ const formatData = (lookupId, apiRes) => {
             </div>
         </div>`
 
-
-        return returnDiv;
-
-
-
-      // lookup obj in db i build
-    // let ref = details.distrixDetails[lookupId]
-        // console.log("District Details:", data)
-    // let thisDistrict;
-    // let apiRes = AxiosUtil.fetchAllCongressMembers().then(
-
-
-    // return div with found data, and set as child to this div
-    // console.log(data)
-    // will need to remove child(in case user already clicked on a district), then add new child
-
-    // this would change the class name of the details div
-    // and tell it to lookup data based on id passed in 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var series3 = chart.series.push(new am4charts.CircleBullet());
-    // series3.tooltipHTML = series3.tooltip.label.interactionsEnabled = true;
-    // series3.tooltip.pointerOrientation = "vertical";
-    // polygonSeries.tooltip.label.interactionsEnabled = true;
-    // polygonSeries.tooltip.pointerOrientation = "vertical"
-
-    // var cl = polygonTemplate.states.create("click")
-    // var dataSet = new AmCharts.DataSet();
-    // dataSet.dataProvider = chartData;
-    // dataSet.fieldMappings = [{
-    //     fromField: "name",
-    //     toField: "value",
-    //     fromField: "val",
-    //     toField: "value"
-    // }];
-
-
-
-
-
-
-
-
-
-    // var chart = new AmCharts.AmStockChart();
-    // chart.pathToImages = "http://www.amcharts.com/lib/3/images/";
-
-    // var dataSet = new AmCharts.DataSet();
-    // dataSet.dataProvider = chartData;
-    // dataSet.fieldMappings = [{
-    //     fromField: "val",
-    //     toField: "value"
-    // }];
-    // dataSet.categoryField = "date";
-    // chart.dataSets = [dataSet];
-
-    // var stockPanel = new AmCharts.StockPanel();
-    // chart.panels = [stockPanel];
-
-    // var legend = new AmCharts.StockLegend();
-    // stockPanel.stockLegend = legend;
-
-    // var panelsSettings = new AmCharts.PanelsSettings();
-    // panelsSettings.startDuration = 1;
-    // chart.panelsSettings = panelsSettings;
-
-    // var graph = new AmCharts.StockGraph();
-    // graph.valueField = "value";
-    // graph.type = "column";
-    // graph.title = "MyGraph";
-    // graph.fillAlphas = 1;
-    // stockPanel.addStockGraph(graph);
-
-    // var categoryAxesSettings = new AmCharts.CategoryAxesSettings();
-    // categoryAxesSettings.dashLength = 5;
-    // chart.categoryAxesSettings = categoryAxesSettings;
-
-    // var valueAxesSettings = new AmCharts.ValueAxesSettings();
-    // valueAxesSettings.dashLength = 5;
-    // chart.valueAxesSettings = valueAxesSettings;
-
-    // var chartScrollbarSettings = new AmCharts.ChartScrollbarSettings();
-    // chartScrollbarSettings.graph = graph;
-    // chartScrollbarSettings.graphType = "line";
-    // chart.chartScrollbarSettings = chartScrollbarSettings;
-
-    // var chartCursorSettings = new AmCharts.ChartCursorSettings();
-    // chartCursorSettings.valueBalloonsEnabled = true;
-    // chart.chartCursorSettings = chartCursorSettings;
-
-    // var periodSelector = new AmCharts.PeriodSelector();
-    // periodSelector.periods = [{
-    //     period: "DD",
-    //     count: 1,
-    //     label: "1 day"
-    // }, {
-    //     period: "DD",
-    //     selected: true,
-    //     count: 5,
-    //     label: "5 days"
-    // }, {
-    //     period: "MM",
-    //     count: 1,
-    //     label: "1 month"
-    // }, {
-    //     period: "YYYY",
-    //     count: 1,
-    //     label: "1 year"
-    // }, {
-    //     period: "YTD",
-    //     label: "YTD"
-    // }, {
-    //     period: "MAX",
-    //     label: "MAX"
-    // }];
-    // chart.periodSelector = periodSelector;
-
-    // chart.write("chartdiv");
-
-
-
-
-// Ref Below
-    //  isbn is a computer programming textbook
-//     let isbn = '0201558025';
-//     axios.get(`/books/${isbn}`)
-//         .then((response) => {
-//             console.log(response);
-//         })
-//         .catch(function (error) {
-//             console.log(error);
-//         });
-
-//     let query = "grace hopper";
-//     axios.get(`/search?string=${query}`)
-//         .then((response) => {
-//             console.log(response);
-//         })
-//         .catch(function (error) {
-//             console.log(error);
-//         });
+    return returnDiv;
+};
