@@ -4,7 +4,7 @@ const AxiosUtil = require('../../requests/axios_util');
 window.onload = function () {
     let apiRes;
     AxiosUtil.fetchAllCongressMembers().then(res => apiRes = res.data.results);
-    // debugger
+  
     var chart = am4core.create("chartdiv", am4maps.MapChart);
 
     // Set map definition
@@ -14,20 +14,20 @@ window.onload = function () {
     chart.projection = new am4maps.projections.Miller();
 
     // Create map polygon series
-    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
     
     // Make map load polygon (like country names) data from GeoJSON
     polygonSeries.useGeodata = true;
     
     // var modata = polygonSeries.MapPolygonSeriesDataItem = chartData[0].val
     // Configure series
-    var polygonTemplate = polygonSeries.mapPolygons.template;
+    let polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
     polygonTemplate.togglable = true;
     // polygonTemplate.tooltipText = modata;
     polygonTemplate.fill = am4core.color("#156064");
     // Create hover state and set alternative fill color
-    var hs = polygonTemplate.states.create("hover");
+    let hs = polygonTemplate.states.create("hover");
     hs.properties.fill = am4core.color("#F8E16C");
 
     // polygonTemplate.tooltip.interactionsEnabled = true;
@@ -39,15 +39,7 @@ window.onload = function () {
         if (currentActive) {
             currentActive.isActive = false;
         }
-        
-        // this.console.log(event.target._dataItem._dataContext)
-        // this.console.log(event.target._dataItem._dataContext.CD116)
-        // console.log(parseInt(event.target._dataItem._dataContext.CD116))
         let elementId = event.target._dataItem._dataContext.CD116
-        // console.log(typeof elementId)
-        
-        // let formatedDataDiv = formatData(elementId)
-        // parentDiv.appendChild(formatData(elementId))
 
         // check if child node
         var hasChild = document.getElementById("main-details-container").hasChildNodes();
@@ -88,7 +80,6 @@ const formatData = (lookupId, apiRes) => {
     let ref = parseInt(lookupId);
     let funding = distDetails.funding[`${ref}`];
     let voting = distDetails.voting[`${ref}`];
-
     let thisDistrict;
 
     apiRes.forEach((obj) => {

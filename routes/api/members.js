@@ -23,8 +23,6 @@ router.get("/info", (request, response) => {
 
 router.get("/cainfo", (request, response) => {
         fetch(`https://whoismyrepresentative.com/getall_reps_bystate.php?state=CA&output=json`)
-        // .then((apiObj) => response.send(apiObj))
-        //     .catch((error) => console.log(error))
         .then(
             (response) => response.text(),
             (error) => console.log(error))

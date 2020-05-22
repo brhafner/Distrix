@@ -24,7 +24,7 @@ export const funding = {
     22: "https://www.opensecrets.org/members-of-congress/summary?cid=N00007248",
     23: "https://www.opensecrets.org/members-of-congress/summary?cid=N00028152",
     24: "https://www.opensecrets.org/members-of-congress/summary?cid=N00037015",
-    25: "#", //no data available
+    25: "#",
     26: "https://www.opensecrets.org/members-of-congress/summary?cid=N00034254",
     27: "https://www.opensecrets.org/members-of-congress/summary?cid=N00030600",
     28: "https://www.opensecrets.org/members-of-congress/summary?cid=N00009585",
@@ -108,86 +108,4 @@ export const voting = {
     51: "https://justfacts.votesmart.org/candidate/key-votes/29100/juan-vargas",
     52: "https://justfacts.votesmart.org/candidate/key-votes/70351/scott-peters",
     53: "https://justfacts.votesmart.org/candidate/key-votes/8168/susan-davis"
-
-    
 }
-
-export const distrixDetails = {
-    "0601": {
-        name: "Congressional District 1",
-        rep: "LaMalfa",
-        party: "Republican",
-        phone: "202-225-3076",
-        link: "https://lamalfa.house.gov",
-       
-        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
-        pvi: "R+11",
-        medIncome: "$55316",
-        ethnicity: [
-                "79.08% white",
-                "1.68% black",
-                "2.89% Asian",
-                "11.99% Hispanic",
-                "3.51% Native American",
-                "0.26% Pacific Islands Americans"
-        ]
-    },
-    "0602": {
-        name: "Congressional District 2",
-        rep: "Huffman",
-        party: "Democrat",
-        phone: "202-225-5161",
-        link: "https://huffman.house.gov",
-        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
-        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
-        pvi: "R+11",
-        medIncome: "$55316",
-        ethnicity: [
-            "79.08% white",
-            "1.68% black",
-            "2.89% Asian",
-            "11.99% Hispanic",
-            "3.51% Native American",
-            "0.26% Pacific Islands Americans"
-        ]
-    },
-    "0603": {
-        name: "Congressional District 3",
-        rep: "Garamendi",
-        party: "Democrat",
-        phone: "202-225-1880",
-        link: "https://garamendi.house.gov",
-        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
-        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
-        pvi: "R+11",
-        medIncome: "$55316",
-        ethnicity: [
-            "79.08% white",
-            "1.68% black",
-            "2.89% Asian",
-            "11.99% Hispanic",
-            "3.51% Native American",
-            "0.26% Pacific Islands Americans"
-        ]
-    },
-    "0604": {
-        name: "Congressional District 4",
-        rep: "McClintock",
-        party: "Republican",
-        phone: "202-225-2511",
-        link: "https://mcclintock.house.gov",
-        // campaignFunding: "http://www.opensecrets.org/members-of-congress/summary?cid=N00033987",
-        // voteSmart: "https://justfacts.votesmart.org/candidate/29713/doug-lamalfa",
-        pvi: "R+11",
-        medIncome: "$55316",
-        ethnicity: [
-            "79.08% white",
-            "1.68% black",
-            "2.89% Asian",
-            "11.99% Hispanic",
-            "3.51% Native American",
-            "0.26% Pacific Islands Americans"
-        ]
-    }
-};
-
