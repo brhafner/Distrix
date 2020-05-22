@@ -1,3 +1,26 @@
+header{
+    /* position: absolute; */
+    /* background: #156064; */
+    /* height: 40px; */
+
+}
+
+.contact-info{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 150px;
+    float: right;
+    margin-left: 87%;
+}
+
+a > img {
+    max-width: 40px;
+    max-height: 50px;
+}
+
+
 Html, body {
   background-image: url('./photos/sunset.jpg');
   background-repeat: no-repeat;
@@ -74,3 +97,7 @@ Html, body {
     color: #F8E16C;
     background-color:#156064;;
 }
+
+/* #chartdiv{
+    margin-top: ;
+} */
