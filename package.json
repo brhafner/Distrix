@@ -15,8 +15,7 @@
   "scripts": {
     "build": "webpack --watch",
     "start": "node app.js",
-    "postinstall": "webpack",
-    "start:debug": "DEBUG=* node app.js"
+    "postinstall": "webpack"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -26,10 +25,11 @@
     "express": "^4.15.3",
     "node-fetch": "^1.7.3",
     "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.7",
-    "webpack": "^3.4.1"
+    "sass-loader": "^6.0.7"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
