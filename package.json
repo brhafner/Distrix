@@ -14,7 +14,8 @@
   },
   "scripts": {
     "build": "webpack --watch",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "webpack"
   },
   "dependencies": {
     "axios": "^0.18.0",
