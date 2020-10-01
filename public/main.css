@@ -19,6 +19,10 @@ a > img {
     max-height: 50px;
 }
 
+.linkedIn-logo{
+    height: 40px;
+    width: 40px;
+}
 
 Html, body {
   background-image: url('./photos/sunset.jpg');

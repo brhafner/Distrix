@@ -78,8 +78,8 @@ const formatData = (lookupId, apiRes) => {
                 <p>Phone: ${thisDistrict.phone}</p>
                 <div class="external-links">
                     <a href="${thisDistrict.link}" target="_blank">Visit Website</a>
-                    <a href="${funding}" target="_blank">Campaign Funding</a>
-                    <a href="${voting}" target="_blank">Voting Record</a>
+                    <a href="${funding}" target="_blank" rel="noreferrer noopener">Campaign Funding</a>
+                    <a href="${voting}" target="_blank" rel="noreferrer noopener">Voting Record</a>
                 </div>
             </div>
         </div>`
